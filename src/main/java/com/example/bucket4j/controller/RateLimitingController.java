@@ -12,8 +12,13 @@ public class RateLimitingController {
     @Autowired
     private RateLimitingService rateLimitingService;
 
-    @GetMapping("/test")
-    public String test() {
-        return rateLimitingService.run();
+    @GetMapping("/test/1")
+    public String test1() {
+        return rateLimitingService.run1();
+    }
+
+    @GetMapping("/test/2")
+    public String test2() {
+        return rateLimitingService.run2();
     }
 }
